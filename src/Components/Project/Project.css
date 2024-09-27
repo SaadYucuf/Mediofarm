@@ -1,0 +1,697 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Reset heading and text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.BigBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.body {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    margin-left: 4vw;
+}
+
+.NavigationBox {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    margin-left: 4vw;
+}
+
+.Navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.Box1 {
+    display: flex;
+    align-items: center;
+}
+
+.TextTitle {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 60%;
+}
+
+.SearchIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+    pointer-events: none;
+    left: 10px;
+    right: auto;
+}
+
+
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+.search-input {
+    width: 90%;
+    height: 65%;
+    padding: 10px 15px;
+    border: 2px solid #efefef;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+    background: #efefef;
+    padding-left: 35px;
+}
+
+.search-input:hover {
+    border: 2px solid #c9c4c4;
+}
+
+.search-input:focus {
+    border-color: #3b47c6;
+}
+
+.plus {
+    font-size: 30px;
+    color: #efefef;
+}
+
+.add-button {
+    background-color: #3b47c6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 65%;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddButtonText {
+    color: #efefef;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.Main-List-Div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.List-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 70px;
+}
+
+.List-div:hover {
+    background-color: #f8f6f8;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.Main-item-div {
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.P-name {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+}
+
+.p-role {
+    color: rgb(88, 87, 87);
+    text-align: left;
+    font-size: 17px;
+}
+
+.P-date {
+    color: #3b47c6;
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.Secondary-item-div {
+    width: 10%;
+    height: 100%;
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+hr {
+    width: 99%;
+    border: none;
+    border-top: 0.2px solid gray;
+    opacity: 0.2;
+    margin: 0 0;
+}
+
+.Line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
+    position: relative;
+}
+
+
+.sticky-options {
+    width: 170px;
+    height: 90px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: white;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.edit-button,
+.delete-button {
+    width: 160px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.edit-button {
+    background-color: #fff;
+    color: gray;
+}
+
+.delete-button {
+    background-color: #fff;
+    color: gray;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #f8f6f8;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ThreeDots {
+    cursor: pointer;
+    font-size: 16px;
+    color: #404040;
+}
+
+.ButtonText {
+    position: relative;
+    color: black;
+    opacity: 0.8;
+    font-size: 16px;
+    padding-left: 7px;
+}
+
+
+/* Add this to your existing CSS file */
+
+.SidebarIcon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: #e8f0fe;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal-question {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.modal-button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-button-yes {
+    background-color: #3b47c6;
+    color: white;
+}
+
+.modal-button-yes:hover {
+    background-color: #2f3aa6;
+    transform: scale(1.05);
+}
+
+.modal-button-yes:active {
+    background-color: #252b6f;
+}
+
+.modal-button-no {
+    background-color: #3b47c6;
+    color: white;
+}
+
+.modal-button-no:hover {
+    background-color: #1772b3;
+    transform: scale(1.05);
+}
+
+.modal-button-no:active {
+    background-color: #1c55b7;
+}
+
+.modal-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* max-width: 1400px */
+@media (max-width: 1400px) {
+    .Navigation {
+        width: 100%;
+    }
+
+    .TextTitle {
+        width: 55%;
+    }
+
+    .search-bar-container {
+        width: 60%;
+    }
+
+    .add-button {
+        height: 65%;
+        width: 130px;
+    }
+
+    .AddButtonText {
+        font-size: 13px;
+    }
+
+    .search-input {
+        font-size: 13px;
+    }
+
+    .plus {
+        font-size: 30px;
+        color: #efefef;
+    }
+
+    .TextTitle {
+        font-size: 16px;
+    }
+
+    .SearchIcon {
+        right: auto;
+        left: 10px;
+    }
+}
+
+/* max-width: 1200px */
+@media (max-width: 1200px) {
+    .Navigation {
+        width: 80%;
+    }
+
+    .TextTitle {
+        width: 50%;
+    }
+
+    .search-bar-container {
+        width: 60%;
+    }
+
+    .Main-List-Div {
+        width: 80%;
+    }
+
+    .AddButtonText {
+        font-size: 12px;
+    }
+
+
+    .plus {
+        font-size: 27px;
+        color: #efefef;
+    }
+
+    .TextTitle {
+        font-size: 15px;
+    }
+
+    .search-input {
+        font-size: 12px;
+    }
+
+    .SearchIcon {
+        right: auto;
+        left: 10px;
+    }
+
+
+}
+
+/* max-width: 992px */
+@media (max-width: 992px) {
+    .Navigation {
+        width: 85%;
+    }
+
+    .TextTitle {
+        width: 45%;
+    }
+
+    .search-bar-container {
+        width: 70%;
+    }
+
+    .search-input-wrapper {
+        position: relative;
+    }
+
+    .SearchIcon {
+        right: auto;
+        left: 10px;
+    }
+
+    .search-input {
+        padding-left: 35px;
+        padding-right: 10px;
+    }
+
+    .Main-List-Div {
+        width: 85%;
+    }
+
+    .add-button {
+        width: 130px;
+        height: 35px;
+    }
+
+    .AddButtonText {
+        font-size: 12px;
+    }
+
+    .TextTitle {
+        font-size: 14px;
+    }
+
+
+    .plus {
+        font-size: 25px;
+    }
+
+    .P-name {
+        font-size: 14px;
+    }
+
+    .p-role {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 872px) {
+    .SearchIcon {
+        right: auto;
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Navigation {
+        width: 90%;
+        display: flex;
+
+    }
+
+    .TextTitle {
+        width: 40%;
+        text-align: center;
+    }
+
+    .search-bar-container {
+        width: 70%;
+    }
+
+    .Main-List-Div {
+        width: 95%;
+    }
+
+    .P-name {
+        font-size: 13px;
+    }
+
+    .p-role {
+        font-size: 17px;
+    }
+
+    .AddButtonText {
+        font-size: 10px;
+    }
+
+    .SidebarIcon {
+        display: none;
+        font-size: 33px;
+        left: 0px important !;
+    }
+
+    .SearchIcon {
+        right: auto;
+        left: 10px;
+    }
+
+}
+
+/* @media (min-width: 576px) {
+    .BigBox{
+        width: 100%;
+        margin-left: 4vw;
+    }
+} */
+
+/* Responsive behavior for max-width 576px */
+@media (max-width: 576px) {
+
+    .NavigationBox {
+        height: auto;
+        padding: 15px 0;
+        background-color: #3f48cc;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Navigation {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .Box1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .SidebarIcon {
+        display: block;
+        font-size: 33px;
+
+    }
+
+    .TextTitle {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .TextTitle h2 {
+        font-size: 20px;
+        color: white;
+        margin: 0;
+    }
+
+
+    .search-bar-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .SearchIcon {
+        font-size: 1.5rem;
+        color: #d1d4ff;
+        position: absolute;
+        right: auto;
+        left: 10px;
+    }
+
+    .search-input {
+        padding: 10px 10px 10px 40px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        width: calc(100% - 50px);
+    }
+
+    .search-input::placeholder {
+        color: #d1d4ff;
+    }
+
+    .add-button {
+        width: 33px;
+        height: 33px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plus {
+        font-size: 24px;
+        color: #3f48cc;
+    }
+
+    .AddButtonText {
+        display: none;
+    }
+
+
+    .search-input:focus {
+        border: rgba(255, 255, 255, 0.3);
+
+    }
+
+    .Main-List-Div {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    .List-div {
+        padding: 15px 10px;
+    }
+
+    .P-name {
+        font-size: 14px;
+    }
+
+    .p-role {
+        font-size: 17px;
+    }
+}

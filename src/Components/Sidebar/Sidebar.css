@@ -1,0 +1,268 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Big_css */
+.Big_css {
+    width: 300px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #3147c6;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: width 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    z-index: 100;
+    width: 70px;
+    height: 100%;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.sidebar.collapsed .Logo {
+    display: flex;
+    width: 45px;
+    height: 45px;
+}
+
+.sidebar.collapsed .Logo:hover {
+    cursor: pointer;
+    color: rgba(218, 198, 198, 0.5);
+}
+
+.logo_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    position: relative;
+}
+
+.sidebar.collapsed .logo_image {
+    width: 35px;
+    height: 35px;
+}
+
+.logo-title {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Sidebar toggle */
+.sidebar-toggle {
+    background-color: #3147c6;
+    color: #fff;
+    border: 1px solid #cac3c3;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    margin-right: -10px;
+    visibility: hidden;
+}
+
+.sidebar ul {
+    width: 150px;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar ul li {
+    width: 200px;
+    height: 40px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #6b76e5;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover {
+    opacity: 0.8;
+    transform: translateX(5px);
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed ul li .icon:hover+a,
+.sidebar.collapsed ul li a:hover {
+    display: block;
+    color: #f3f3f3;
+    background-color: #3b47c6;
+    position: relative;
+    right: -30px;
+    transition: color 0.3s ease, right 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar.collapsed ul {
+    width: 150px;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sidebar.collapsed ul li {
+    width: 150px;
+}
+
+.sidebar.collapsed ul li a {
+    display: none;
+}
+
+.sidebar.collapsed ul li:hover {
+    background: none;
+}
+
+.sidebar.collapsed .icon {
+    cursor: pointer;
+}
+
+/* Content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: filter 0.3s ease;
+}
+
+.overlay~.content {
+    filter: blur(5px);
+}
+
+/* Responsive styling */
+@media (max-width: 766px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .Big_css {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.collapsed {
+        width: 60px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .sidebar.collapsed~.content {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        bottom: auto;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .sidebar.collapsed {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar-toggle {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    .search-input {
+        width: 100%;
+        /* Instead of fixed percentage on small screens */
+        max-width: 300px;
+        /* Optional to avoid it being too large */
+    }
+ 
+}
+
+@media (max-width: 576px) {
+    .sidebar{
+        display:none;
+    }
+}
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    z-index: 998;
+    transition: opacity 0.3s ease;
+}
+
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+ }  
